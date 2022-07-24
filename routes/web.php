@@ -41,6 +41,16 @@ Route::get('/produtos', function () {
     return view('products');
 });
 
-Route::get('/aluno', function () {
-    return view('aluno');
+//ROTA COM PARAMETRO OBRIGATORIO
+//O valor recebido no parametro do endpoint passa para a function como ID e só então poder passar para a VIEW como outro parametro
+Route::get('/aluno/{id}', function ($id) {
+
+    return view('aluno', ['id' => $id]);
+});
+
+//ROTA COM PARAMETRO OPCIONAL
+//O valor recebido no parametro do endpoint passa para a function como ID e só então poder passar para a VIEW como outro parametro
+Route::get('/aluno2/{id?}', function ($id = null) {
+
+    return view('aluno', ['id' => $id]);
 });

@@ -1,0 +1,13 @@
+#evento-create-container {
+    padding: 30px;
+}
+
+#evento-create-container label {
+    font-weight: bold;
+}
+
+#evento-create-container input,
+#evento-create-container select,
+#evento-create-container textarea {
+    font-size: 12px;
+}

@@ -16,6 +16,9 @@
 
         <!-- CSS DA APLICAÇÃO-->
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/evento.css">
+
+        <!-- SCRIPT DA APLICAÇÃO-->
         <script src="/js/script.js"></script>
     </head>
     <body class="antialiased">

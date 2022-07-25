@@ -18,12 +18,13 @@ use App\Http\Controllers\EventController;
 
 //Rotas do dos metodos
 Route::get('/', [EventController::class, 'index']);
+Route::get('/estudo', [EventController::class, 'index2']);
 Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/contact', function () {
     return view('contact');
 });
-
+    
 Route::get('/produtos', function () {
     return view('products');
 });

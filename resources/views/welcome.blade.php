@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('titcle', 'PB Eventos')
+@section('title', 'PB Eventos')
 
 @section('content')
     
@@ -23,7 +23,7 @@
                         <div class="card-date">10/09/2022</div>
                         <h5 class="card-title">{{ $evento->titulo }}</h5>
                         <p class="card-participantes">X Participantes</p>
-                        <a href="#" class="btn btn-primary">Saber mais</a>
+                        <a href="/events/ {{ $evento->id }}" class="btn btn-primary">Saber mais</a>
                     </div>
                 </div>
             @endforeach

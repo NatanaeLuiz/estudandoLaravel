@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Evento;
+
 class EventController extends Controller
 {
-    
-    public function index() {
+    //Endpoint para estudo
+    public function index2() {
         $nome = "Natanael";
         $idade = 25;
         $sexo = "M";
@@ -16,7 +18,7 @@ class EventController extends Controller
     
         $nomes = ["João","José","Rita","Bruno","Diego"];
     
-        return view('welcome', 
+        return view('estudo', 
         [
             'nome' => $nome, 
             'idade' => $idade, 
@@ -24,6 +26,17 @@ class EventController extends Controller
             'sexo' => $sexo,
             'arr' => $arr,
             'nomes' => $nomes
+        ]);
+    }
+
+    //---------------------------------------------------------
+    //ENDPOINTSs principal do projeto Evento
+    public function index(){
+        $events = Evento::all();
+    
+        return view('welcome', 
+        [
+            'eventos' => $events
         ]);
     }
 

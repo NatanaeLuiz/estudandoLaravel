@@ -32,11 +32,23 @@ class EventController extends Controller
     //---------------------------------------------------------
     //ENDPOINTSs principal do projeto Evento
     public function index(){
-        $events = Evento::all();
+
+        $busca = request('busca');
+
+        if ($busca) {
+
+            $evento = Evento::where([
+                ['titulo', 'like', '%'.$busca.'%']
+            ])->get();
+
+        } else {
+            $evento = Evento::all();
+        }
     
         return view('welcome', 
         [
-            'eventos' => $events
+            'eventos' => $evento,
+            'busca' => $busca
         ]);
     }
 

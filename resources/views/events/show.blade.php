@@ -12,6 +12,7 @@
     
         <div id="info-container" class="col-md-6">
             <h1>{{ $evento->titulo }}</h1>
+            <p class="event-data"><ion-icon name="calendar-outline"></ion-icon>{{ date('d/m/Y', strtotime($evento->data)) }} </p>
             <p class="event-cidade"><ion-icon name="location-outline"></ion-icon>{{ $evento->cidade}} </p>
             <p class="eventos-participantes"><ion-icon name="people-outline"></ion-icon> X Participantes</p>
             <p class="event-woner"><ion-icon name="star-outline"></ion-icon> Dono do Evento</p>

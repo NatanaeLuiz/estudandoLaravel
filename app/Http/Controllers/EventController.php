@@ -34,17 +34,17 @@ class EventController extends Controller
     public function index(){
 
         $busca = request('busca');
-
+        
         if ($busca) {
 
             $evento = Evento::where([
                 ['titulo', 'like', '%'.$busca.'%']
-            ])->get();
+            ])->paginate(3);
 
         } else {
-            $evento = Evento::all();
+            $evento = Evento::paginate(3);
         }
-    
+        
         return view('welcome', 
         [
             'eventos' => $evento,

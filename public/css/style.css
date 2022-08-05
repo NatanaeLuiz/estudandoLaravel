@@ -121,6 +121,13 @@ header{
     border: #F2A340;
 }
 
+/* ---- PAGINAÇÃO ---- */
+
+.pagination{
+    float: right;
+    margin-top: 10px;
+}
+
 /*--- FOOTER ---*/
 
 footer{

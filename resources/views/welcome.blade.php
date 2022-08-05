@@ -30,6 +30,7 @@
                         <a href="/events/ {{ $evento->id }}" class="btn btn-primary">Saber mais</a>
                     </div>
                 </div>
+                
             @endforeach
             @if(count($eventos) == 0 && $busca)
                 <p>Não foi possível encontrar nenhum evento com {{ $busca }} <a href="/">Ver todos</a> </p>
@@ -39,5 +40,9 @@
         </div>
 
     </div>
+    
+    {{ $eventos->appends([
+        'busca' => request()->get('busca', '')
+    ])->links()}}
 
 @endsection  
